@@ -1,1 +1,1 @@
-# wp-i18n-contracts
+# WP i18n Wrapper
