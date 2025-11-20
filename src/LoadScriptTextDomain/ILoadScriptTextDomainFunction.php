@@ -10,8 +10,8 @@ defined('ABSPATH') || exit;
 
 interface ILoadScriptTextDomainFunction extends IExecutableFunction, IHasDomain
 {
-    public function handle(string $handle): self;
-    public function path(string $path): self;
+    public function handle(string $handle): static;
+    public function path(string $path): static;
 
     public function getHandle(): string;
     public function getPath(): string;
