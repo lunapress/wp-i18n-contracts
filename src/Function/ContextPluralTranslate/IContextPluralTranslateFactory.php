@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace LunaPress\Wp\I18nContracts\ContextPluralTranslate;
+namespace LunaPress\Wp\I18nContracts\Function\ContextPluralTranslate;
 
 use LunaPress\FoundationContracts\Support\IFactory;
+use LunaPress\Wp\I18nContracts\Function\ContextPluralTranslate\IContextPluralTranslateFunction;
 
 defined('ABSPATH') || exit;
 
