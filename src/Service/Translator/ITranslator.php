@@ -40,23 +40,23 @@ interface ITranslator
 
     public function contextNoopPlural(string $single, string $plural, string $context): INoopedPlural;
 
-    public function translateNoopedPlural(INoopedPlural $noopedPlural, int $number, ?string $domain = null): string;
+    public function translateNoopedPlural(INoopedPlural $noopedPlural, int $number): string;
 
-    public function loadTextDomain(string $domain, string $moFile, ?string $locale = null): bool;
+    public function loadTextDomain(string $moFile, ?string $locale = null): bool;
 
-    public function unloadTextDomain(string $domain, bool $reloadable = false): bool;
+    public function unloadTextDomain(bool $reloadable = false): bool;
 
-    public function loadPluginTextDomain(string $domain, string|false $pluginRelPath = false): bool;
+    public function loadPluginTextDomain(string|false $pluginRelPath = false): bool;
 
-    public function loadMuPluginTextDomain(string $domain, string $muPluginRelPath = ''): bool;
+    public function loadMuPluginTextDomain(string $muPluginRelPath = ''): bool;
 
-    public function loadThemeTextDomain(string $domain, string|false $path = false): bool;
+    public function loadThemeTextDomain(string|false $path = false): bool;
 
-    public function loadChildThemeTextDomain(string $domain, string|false $path = false): bool;
+    public function loadChildThemeTextDomain(string|false $path = false): bool;
 
-    public function loadScriptTextDomain(string $handle, string $domain, string $path): bool;
+    public function loadScriptTextDomain(string $handle, string $path): bool;
 
-    public function isTextDomainLoaded(string $domain): bool;
+    public function isTextDomainLoaded(): bool;
 
     public function getLocale(): string;
 
