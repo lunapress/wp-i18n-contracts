@@ -42,7 +42,7 @@ interface ITranslator
 
     public function translateNoopedPlural(INoopedPlural $noopedPlural, int $number, ?string $domain = null): string;
 
-    public function loadTextDomain(string $domain, string $mofile, ?string $locale = null): bool;
+    public function loadTextDomain(string $domain, string $moFile, ?string $locale = null): bool;
 
     public function unloadTextDomain(string $domain, bool $reloadable = false): bool;
 
