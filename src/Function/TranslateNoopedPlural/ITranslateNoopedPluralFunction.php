@@ -12,8 +12,8 @@ defined('ABSPATH') || exit;
 interface ITranslateNoopedPluralFunction extends IExecutableFunction, IHasDomain
 {
     public function noopedPlural(INoopedPlural $noopedPlural): static;
-    public function number(int $number): static;
+    public function count(int $count): static;
 
     public function getNoopedPlural(): INoopedPlural;
-    public function getNumber(): int;
+    public function getCount(): int;
 }
