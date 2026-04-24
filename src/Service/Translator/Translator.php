@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace LunaPress\Wp\I18nContracts\Service\Translator;
 
-use LunaPress\Wp\I18nContracts\Entity\INoopedPlural;
+use LunaPress\Wp\I18nContracts\DTO\NoopedPlural;
 
 
-
-interface ITranslator
+interface Translator
 {
     public function translate(string $text): string;
 
@@ -34,9 +33,9 @@ interface ITranslator
 
     public function translateEscAttrContext(string $text, string $context): string;
 
-    public function noopPlural(string $single, string $plural): INoopedPlural;
+    public function noopPlural(string $single, string $plural): NoopedPlural;
 
-    public function contextNoopPlural(string $single, string $plural, string $context): INoopedPlural;
+    public function contextNoopPlural(string $single, string $plural, string $context): NoopedPlural;
 
-    public function translateNoopedPlural(INoopedPlural $noopedPlural, int $number): string;
+    public function translateNoopedPlural(NoopedPlural $noopedPlural, int $number): string;
 }
